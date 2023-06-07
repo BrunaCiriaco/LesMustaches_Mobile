@@ -4,8 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import naviCss from './Styles/naviCss'
 import Produtos from './ComponProdutos/ListProduto';
-import Servico from './Servico'
 import Home from './Home';
+import Tiles from './TileV2';
+import Maps from './Maps/Map';
 
   function HomeScreen() {
     return (
@@ -20,7 +21,7 @@ import Home from './Home';
   function ServicosScreen() {
     return (
       <View style={naviCss.navigator}>
-        <Servico />
+        <Tiles/>
       </View>
     );
   }
@@ -44,7 +45,7 @@ import Home from './Home';
   function MapaScreen() {
     return (
       <View style={naviCss.navigator}>
-        <Text>Teste</Text>
+        <Maps />
       </View>
     );
   }

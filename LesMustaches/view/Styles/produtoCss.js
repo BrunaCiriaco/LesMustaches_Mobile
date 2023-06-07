@@ -5,7 +5,7 @@ const produtoCss = StyleSheet.create({
         height:300,
         width:350,
         marginTop:150,
-        margin:10,
+        margin:30,
         
     },
     text:{
