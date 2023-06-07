@@ -18,7 +18,7 @@ function CustomMarker(
       }}
       tracksViewChanges={false}
     >
-      {/* Criação de icone  */}
+       //Criação de icone do mapa 
       <View style={mapsCss.markerWrapper}>
         <View style={[
           mapsCss.markerBody,
@@ -36,7 +36,7 @@ function CustomMarker(
         ]}>
         </View>
       </View>
-      {/* informações sobre a barbearia*/}
+      //informações sobre a barbearia
       <Callout style={mapsCss.callout}>
         <View>
             <Text style={mapsCss.title}> Les Mustaches</Text>
