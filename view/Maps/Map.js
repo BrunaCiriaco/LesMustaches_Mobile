@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 import { Text } from "react-native";
 import MapView from "react-native-maps";
 import CustomMarker from './CustomMarker';
+import mapsCss from '../../view/Styles/mapsCss'
 
 const Map = () => {
     const [camera, setCamera] = useState({
@@ -18,14 +19,15 @@ const Map = () => {
   return (
     <> 
         <MapView style={styles.map}  camera={camera} >
-                <CustomMarker
+                <CustomMarker style={mapsCss.markerWrapper}
                     latitude={-23.52192}
                     longitude={-46.4764514}
-                    color={"#000000"}
+//                    color={"#FF000080"}
+                    color={"#001EFF80"}                    
+                    // image={require('../../assets/images/maps/map_marker.png')}
                 >
                 </CustomMarker>
         </MapView>
-
       </>
   )
      

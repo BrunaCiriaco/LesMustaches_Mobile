@@ -1,35 +1,121 @@
-import React from "react";
-import { Text, ScrollView, View, Image } from "react-native";
-import servicoCss from './Styles/servicoCss'
+import React from 'react';
+import { Image, View, ScrollView, StyleSheet, SafeAreaView } from 'react-native';
+import { Tile } from "react-native-elements";
+import { Text } from '@rneui/themed';
+import { fonts } from '@rneui/base';
+import myLocalImageBarba from '../assets/images/Servico/barba.png';
+import myLocalImageCorteInfantil from '../assets/images/Servico/corteKids2.png'
+import myLocalImageCorteSenior from '../assets/images/Servico/corteSenior.png'
+import myLocalImageCorteAdulto from '../assets/images/Servico/corteAdulto.jpg'
 
-function listServico(){
-    return(
 
-            <ScrollView>
-                <View style={servicoCss.kids}>
-                <Image
-                  source={require('../assets/images/Servico/corteKids.jpg')}
-                  style={{width:300,height: 300, alignSelf:'center', borderRadius:20, marginTop:10}}
-                />
-                    <Text style={servicoCss.title}> Corte Infantil</Text>
-                    <Text style={servicoCss.text}>Um Corte especial para nossas crianças se achar o super heroi</Text>
-                </View>
-                <View style={servicoCss.kids}>
-                <Image
-                  source={require('../assets/images/Servico/corteKids.jpg')}
-                  style={{width:300,height: 300, alignSelf:'center', marginTop:10}}
-                />
-                    <Text style={servicoCss.title}> Corte Infantil</Text>
-                    <Text style={servicoCss.text}>Um Corte especial para nossas crianças se achar o super heroi</Text>
-                </View>
-               
-            </ScrollView>
+const Tiles = () => {
+    //const HeaderImage = styles.div`background-image: url(${myLocalImage});`;
+    return (
+        <SafeAreaView>
+                <ScrollView style={{ paddingVertical: 30 }}>
+                    {/*                     <Text style={styles.subHeader}>SERVIÇOS</Text> */}
+                    <View style={{ opacity: 0.9 }}>
+                        <Tile
+                            imageSrc={myLocalImageCorteAdulto}
+                            title="CORTE ADULTO"
+                            titleStyle={{ fontSize: 40 }}
+                            /*                             containerStyle={{
+                                                            borderWidth: 2,
+                                                            borderColor: 'red',
+                                                        }} */
+                            featured
+                            caption="Barbearia Les Mustaches"
+                            width='100%'
+                            height={230}
+                            flex={1}
+                        />
+                    </View>
+                    <View style={{ opacity: 0.9 }}>
+                        <Tile
+                            imageSrc={myLocalImageBarba}
+                            title="BARBA"
+                            titleStyle={{ fontSize: 40 }}
+                            /*                             containerStyle={{
+                                                            borderWidth: 2,
+                                                            borderColor: 'red',
+                                                        }} */
+                            featured
+                            caption="Barbearia Les Mustaches"
+                            width='100%'
+                            height={230}
+                            flex={1}
+                        />
+                    </View>
+                    <View style={{ opacity: 0.9 }}>
+                        <Tile
+                            imageSrc={myLocalImageCorteInfantil}
+                            title="CORTE INFANTIL"
+                            titleStyle={{ fontSize: 40 }}
+                            /*                             containerStyle={{
+                                                            borderWidth: 2,
+                                                            borderColor: 'red',
+                                                        }} */
+                            featured
+                            caption="Barbearia Les Mustaches"
+                            width='101%'
+                            height={230}
+                        />
+                    </View>
+                    <View style={{ opacity: 0.9 }}>
+                        <Tile
+                            imageSrc={myLocalImageCorteSenior}
+                            title="CORTE SÊNIOR"
+                            titleStyle={{ fontSize: 40 }}
+                            /*                             containerStyle={{
+                                                            borderWidth: 2,
+                                                            borderColor: 'red',
+                                                        }} */
+                            featured
+                            caption="Barbearia Les Mustaches"
+                            width='100%'
+                            height={230}
+                            flex={1}
+                        />
+                    </View>
+                    <View style={{ opacity: 0.9 }}>
+                        <Tile
+                            imageSrc={myLocalImageCorteSenior}
+                            title="CORTE SÊNIOR"
+                            titleStyle={{ fontSize: 40 }}
+                            /*                             containerStyle={{
+                                                            borderWidth: 2,
+                                                            borderColor: 'red',
+                                                        }} */
+                            featured
+                            caption="Barbearia Les Mustaches"
+                            width='100%'
+                            height={230}
+                            flex={1}
+                        />
+                    </View>
+                    <View style={{ opacity: 0.9 }}>
+                        <Tile
+                            imageSrc={myLocalImageBarba}
+                        />
+                    </View>
+                </ScrollView>
+        </SafeAreaView>
+    );
+};
 
-    )
-}
+const styles = StyleSheet.create({
+    subHeader: {
+        backgroundColor: "#4f4f4f",
+        color: "white",
+        textAlign: "center",
+        paddingVertical: 5,
+        marginBottom: 10,
+        fontSize:
+            18,
+        fontWeight: "bold",
+        fontFamily: fonts.primary
+    }
+});
 
-export default Servico = () =>{
-    return(
-        listServico()
-    )
-}
+export default Tiles;

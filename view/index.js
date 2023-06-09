@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import naviCss from './Styles/naviCss'
 import Produtos from './ComponProdutos/ListProduto';
 import Home from './Home';
-import Tiles from './TileV2';
+import Tiles from './Servico';
 import Maps from './Maps/Map';
 
   function HomeScreen() {
@@ -137,7 +137,7 @@ return (
 
 const index = () =>{
     return(
-        <View style={{width:400, height:'100%'}} >
+        <View style={{width:410, height:'100%'}} >
           <NavigationContainer>
             <MyTabs/>
          </NavigationContainer>
