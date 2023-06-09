@@ -1,11 +1,12 @@
 import React from "react"
-import { Alert, Button, ScrollView } from "react-native"
+import { Text, ScrollView } from "react-native"
 import Produto from "./Carrinho"
 
 ListProdutos = () => {
 return(
     <>
-        <ScrollView horizontal={true} >
+        <Text style={{margin:10}}></Text>
+        <ScrollView >
 
             <Produto
                 id='1'

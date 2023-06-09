@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Image, ImageBackground, SafeAreaView, StyleSheet, Text, TouchableOpacity, View, ViewComponent } from 'react-native';
+import { Image, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import naviCss from './Styles/naviCss'
@@ -7,6 +7,7 @@ import Produtos from './ComponProdutos/ListProduto';
 import Home from './Home';
 import Tiles from './Servico';
 import Maps from './Maps/Map';
+import Schedules from './schedule';
 
   function HomeScreen() {
     return (
@@ -34,10 +35,10 @@ import Maps from './Maps/Map';
     );
   }
 
-  function AjudaScreen() {
+  function Schedule() {
     return (
       <View style={naviCss.navigator}>
-        <Text>Ajuda</Text>
+          <Schedules/>
       </View>
     );
   }
@@ -107,12 +108,12 @@ return (
     }}
   />
   <TabBottom.Screen
-    name="Ajuda"
-    component={AjudaScreen}
+    name="Agenda"
+    component={Schedule}
     options={{
       tabBarIcon: ({ focused }) => (
         <Image
-          source={require('../assets/images/TabNavigator/ajuda1.png')}
+          source={require('../assets/images/agenda.png')}
           style={{width: 35, height: 35,tintColor: focused ? 'white' : '#999999'}}
         />
       ),

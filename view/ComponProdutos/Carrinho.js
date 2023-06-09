@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { Text,View,Image,Button,TouchableOpacity } from "react-native";
+import { Text,View,Image,TouchableOpacity } from "react-native";
 import produtoCss from '../Styles/produtoCss'
 
 const Produto = (props) =>{
@@ -49,9 +49,9 @@ const Produto = (props) =>{
   
 
                 <TouchableOpacity onPress={carrinho} >
-                 <Text style={{color:'#000', fontSize: 15, fontWeight:'bold'}}>Adiconar </Text>
+                 <Text style={{color:'#000', fontSize: 15, fontWeight:'bold', backgroundColor:'#d4d4d4', paddingLeft:10}}>Adiconar </Text>
                 </TouchableOpacity>
-                <Text>Total : {`${preco}`}</Text>
+                <Text style={{color:'#000', fontSize: 15, fontWeight:'bold', backgroundColor:'#d4d4d4', paddingLeft:10}} >Total : {`${preco}`}</Text>
               
             </View>         
             

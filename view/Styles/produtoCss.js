@@ -2,14 +2,17 @@ import { StyleSheet } from "react-native";
 
 const produtoCss = StyleSheet.create({
     list:{
-        height:300,
-        width:350,
-        marginTop:150,
+        height:390,
+        width:300,
+        marginTop:40,
         margin:30,
+        marginBottom:170,
+        borderColor:'#000'
+        
         
     },
     text:{
-        backgroundColor:'#000',
+        backgroundColor:'#4f4f4f',
         color:'#FFFF',
         padding:40,
         marginTop:-50
@@ -35,18 +38,19 @@ const produtoCss = StyleSheet.create({
 
     },
     value:{
-        backgroundColor:'#000',
-        color:'#FFFF',
+        backgroundColor:'#d4d4d4',
+        color:'#000',
         fontWeight:'bold',
         textAlign:'center',
         flexDirection:'row',
         padding:20
     },
     quantidade:{
+        backgroundColor:'#d4d4d4',
         fontWeight:'bold',
         color:'#000',
         paddingLeft:60,
-        paddingRight:30,         
+        paddingRight:26,         
     }
 
 })

@@ -7,23 +7,19 @@ import myLocalImageBarba from '../assets/images/Servico/barba.png';
 import myLocalImageCorteInfantil from '../assets/images/Servico/corteKids2.png'
 import myLocalImageCorteSenior from '../assets/images/Servico/corteSenior.png'
 import myLocalImageCorteAdulto from '../assets/images/Servico/corteAdulto.jpg'
+import servicoCss from './Styles/servicoCss'
 
 
 const Tiles = () => {
     //const HeaderImage = styles.div`background-image: url(${myLocalImage});`;
     return (
-        <SafeAreaView>
+        <SafeAreaView style={servicoCss.tela}>
                 <ScrollView style={{ paddingVertical: 30 }}>
-                    {/*                     <Text style={styles.subHeader}>SERVIÇOS</Text> */}
                     <View style={{ opacity: 0.9 }}>
                         <Tile
                             imageSrc={myLocalImageCorteAdulto}
                             title="CORTE ADULTO"
                             titleStyle={{ fontSize: 40 }}
-                            /*                             containerStyle={{
-                                                            borderWidth: 2,
-                                                            borderColor: 'red',
-                                                        }} */
                             featured
                             caption="Barbearia Les Mustaches"
                             width='100%'
@@ -36,10 +32,6 @@ const Tiles = () => {
                             imageSrc={myLocalImageBarba}
                             title="BARBA"
                             titleStyle={{ fontSize: 40 }}
-                            /*                             containerStyle={{
-                                                            borderWidth: 2,
-                                                            borderColor: 'red',
-                                                        }} */
                             featured
                             caption="Barbearia Les Mustaches"
                             width='100%'
@@ -52,10 +44,6 @@ const Tiles = () => {
                             imageSrc={myLocalImageCorteInfantil}
                             title="CORTE INFANTIL"
                             titleStyle={{ fontSize: 40 }}
-                            /*                             containerStyle={{
-                                                            borderWidth: 2,
-                                                            borderColor: 'red',
-                                                        }} */
                             featured
                             caption="Barbearia Les Mustaches"
                             width='101%'
@@ -67,36 +55,11 @@ const Tiles = () => {
                             imageSrc={myLocalImageCorteSenior}
                             title="CORTE SÊNIOR"
                             titleStyle={{ fontSize: 40 }}
-                            /*                             containerStyle={{
-                                                            borderWidth: 2,
-                                                            borderColor: 'red',
-                                                        }} */
                             featured
                             caption="Barbearia Les Mustaches"
                             width='100%'
                             height={230}
                             flex={1}
-                        />
-                    </View>
-                    <View style={{ opacity: 0.9 }}>
-                        <Tile
-                            imageSrc={myLocalImageCorteSenior}
-                            title="CORTE SÊNIOR"
-                            titleStyle={{ fontSize: 40 }}
-                            /*                             containerStyle={{
-                                                            borderWidth: 2,
-                                                            borderColor: 'red',
-                                                        }} */
-                            featured
-                            caption="Barbearia Les Mustaches"
-                            width='100%'
-                            height={230}
-                            flex={1}
-                        />
-                    </View>
-                    <View style={{ opacity: 0.9 }}>
-                        <Tile
-                            imageSrc={myLocalImageBarba}
                         />
                     </View>
                 </ScrollView>
@@ -111,8 +74,7 @@ const styles = StyleSheet.create({
         textAlign: "center",
         paddingVertical: 5,
         marginBottom: 10,
-        fontSize:
-            18,
+        fontSize:18,
         fontWeight: "bold",
         fontFamily: fonts.primary
     }

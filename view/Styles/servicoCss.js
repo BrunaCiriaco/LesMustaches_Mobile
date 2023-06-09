@@ -1,6 +1,11 @@
 import { StyleSheet } from "react-native";
 
 export default servicoCss = StyleSheet.create({
+        tela:{
+            marginTop:70,
+            height:"100%",
+            width:"100%",
+        },
         title:{
             fontSize:20,
             textAlign:'center',
